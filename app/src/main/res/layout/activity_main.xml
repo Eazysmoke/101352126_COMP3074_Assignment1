@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/hoursInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hours worked"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/rateInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hourly rate ($)"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/taxInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tax rate (%, example: 15)"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/payOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Pay: $0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/overtimeOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Overtime pay: $0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Total pay: $0.00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/taxOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tax: $0.00"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/aboutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="About" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
